@@ -23,8 +23,8 @@ module.exports.getLogin=(req,res)=>{
     
 module.exports.postLogin=(req,res)=>{
     req.flash('success',"Successfully Logged-in");
-    const redirectUrl=req.session.returnTo || '/campgrounds';
-    console.log(req.body)
+    const redirectUrl='/campgrounds';
+    
     delete req.session.returnTo;
     res.redirect(redirectUrl)
 }
